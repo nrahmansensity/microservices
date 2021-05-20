@@ -13,10 +13,11 @@ phases:
   build:
     commands:
     - pwd
-    - docker build --tag node-docker
+    - docker build --tag node-docker .
     - docker tage node-docker:latest node-docker:v1.0
   post_build:
     commands:
     - pwd
     - docker images
+    - ls
   
