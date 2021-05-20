@@ -1,8 +1,21 @@
 version: 0.2
 
-phase:
+phases:
   install:
     runtime-versions:
       docker: 18
   pre_build:
+    commands:
     - echo "HI" 
+    - pwd
+    - cd node-docker
+  build:
+    commands:
+    - pwd
+    - docker build --tag node-docker
+    - docker tage node-docker:latest node-docker:v1.0
+  post_build:
+    commands:
+    - pwd
+    - docker images
+  
