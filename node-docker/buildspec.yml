@@ -1,0 +1,8 @@
+version: 0.2
+
+phase:
+  install:
+    runtime-versions:
+      docker: 18
+  pre_build:
+    - echo "HI" 
