@@ -2,8 +2,9 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      docker: 19
+    commands:
+    - docker version
+    
   pre_build:
     commands:
     - echo "HI" 
