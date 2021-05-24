@@ -22,4 +22,5 @@ phases:
     - ls
     - docker run -d -p 8000:8000 node-docker:v1.0
     - docker ps
+    - curl -sv localhost:8000
   
