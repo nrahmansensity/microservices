@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
     - echo "HI" 
-    - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 770073169707.dkr.ecr.us-east-1.amazonaws.com
+    - docker login --username AWS --password $(aws ecr get-login-password --region us-east-1) 770073169707.dkr.ecr.us-east-1.amazonaws.com
     - pwd
     - cd node-docker
   build:
